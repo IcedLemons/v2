@@ -8,7 +8,7 @@ module.exports = {
 
             const randomIndex = Math.floor(Math.random() * (activities.length - 1) + 1);
             const newActivity = activities[randomIndex];
-            bot.client.user.setActivity(newActivity , {type: "STREAMING" });
+            bot.client.user.setActivity(newActivity , {type: "WATCHING" });
         }, 4000);
     }
 }
