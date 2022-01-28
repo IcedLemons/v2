@@ -30,8 +30,9 @@ module.exports = {
         const memberTarget = message.guild.members.cache.get(target.id);
         const time = ms(args[1])
         const reason = args[2] || null
-        memberTarget.timeout(time, reason);
-
+        memberTarget.timeout(time, reason).catch(err => {
+            message.channel.send({ embeds: [error] });
+        })
         const mutereply = new MessageEmbed()
 	    .setColor('#FEE75C')
 	    .setTitle('Success\n')
