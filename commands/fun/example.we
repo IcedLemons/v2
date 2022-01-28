@@ -1,0 +1,23 @@
+// const Discord = require("discord.js");
+// const { MessageEmbed } = require('discord.js');
+
+// module.exports = {
+//     name: "test",
+//     category: "info",
+//     permissions: [],
+//     devOnly: false,
+//     run: async ({client, message, args}) => {
+
+//         const m = await message.channel.send("Calculating ping...");
+//         const { embed } = require('discord.js');
+//         const pingpong = new MessageEmbed()
+//         .setColor('#0099ff')
+//         .setTitle('Pong!')
+//         .setDescription (`**Message:** ${m.createdTimestamp - message.createdTimestamp}ms || **Websocket:** ${Math.round(client.ping)}ms`)
+//         .setTimestamp()
+//         .setFooter({ text: 'Lemonade', iconURL: 'https://imgur.com/a/c4Zh7Sa' });
+        
+//         m.edit(pingpong);
+        
+//     }
+// }
