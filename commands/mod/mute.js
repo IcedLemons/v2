@@ -25,6 +25,13 @@ module.exports = {
 	    .setTimestamp()
 	    .setFooter({ text: 'Lemonade', iconURL: 'https://lemonade.ga/noods/ApplicationFrameHost_ULyyoL2sv1.png' });
 
+        const error = new MessageEmbed()
+	    .setColor('#E74C3C')
+	    .setTitle('Error\n')
+	    .setDescription('Please specify valid content')
+	    .setTimestamp()
+	    .setFooter({ text: 'Lemonade', iconURL: 'https://lemonade.ga/noods/ApplicationFrameHost_ULyyoL2sv1.png' });
+
         if(!target) return message.channel.send({ embeds: [error] })
         if (!args[1]) return message.channel.send({ embeds: [amount] })
         const memberTarget = message.guild.members.cache.get(target.id);
