@@ -4,11 +4,11 @@ module.exports = {
         console.log("Logged in as " + bot.client.user.tag)
         setInterval(() => {
 
-            const activities = ["-commands","manga","-commands"]
+            const activities = ["manhwa","manga","manhua","anime"]
 
             const randomIndex = Math.floor(Math.random() * (activities.length - 1) + 1);
             const newActivity = activities[randomIndex];
-            bot.client.user.setActivity(newActivity, {type: "PLAYING" });
-        }, 5000);
+            bot.client.user.setActivity(newActivity , {type: "STREAMING" });
+        }, 4000);
     }
 }
