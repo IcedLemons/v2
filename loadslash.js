@@ -32,7 +32,7 @@ client.on("ready", async () => {
     return console.error({ embeds: [gd]})
 
     await guild.commands.set([...client.slashcommands.values()])
-    console.log(`Successfully loaded in ${client.slashcommands.size}`)
+    console.log(`Successfully loaded in ${client.slashcommands.size} slash commands`)
     process.exit(0)
     
 })

@@ -3,8 +3,8 @@ const {MessageEmbed} = require("discord.js")
 
 
 const run = async (client, interaction) => {
-    
-    message.reply('Calculating ping...').then((resultMessage) => {
+
+    interaction.reply('Calculating ping...').then((resultMessage) => {
         const ping = resultMessage.createdTimestamp - message.createdTimestamp
         const lat = new MessageEmbed()
         .setColor('#57F287')
