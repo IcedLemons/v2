@@ -6,7 +6,7 @@ const client = new Discord.Client({ intents: 32767 });
 
 let bot = {
     client, 
-    prefix: ["?"],
+    prefix: [";"],
     owners: ["540003015147520000"]
 }
 
