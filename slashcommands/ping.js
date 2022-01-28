@@ -5,7 +5,7 @@ const {MessageEmbed} = require("discord.js")
 const run = async (client, interaction) => {
 
     interaction.reply('Calculating ping...').then((resultMessage) => {
-        const ping = resultMessage.createdTimestamp - message.createdTimestamp
+        const ping = new Date() - new Date(context.params.event.received_at)
         const lat = new MessageEmbed()
         .setColor('#57F287')
         .setTitle('Pong!\n')
