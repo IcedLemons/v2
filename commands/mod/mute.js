@@ -37,9 +37,8 @@ module.exports = {
         const memberTarget = message.guild.members.cache.get(target.id);
         const time = ms(args[1])
         const reason = args[2] || null
-        memberTarget.timeout(time, reason).catch(err => {
-            message.channel.send({ embeds: [cmd] });
-        })
+        memberTarget.timeout(time, reason)
+
         const mutereply = new MessageEmbed()
 	    .setColor('#FEE75C')
 	    .setTitle('Success\n')
@@ -47,7 +46,9 @@ module.exports = {
 	    .setTimestamp()
 	    .setFooter({ text: 'Lemonade', iconURL: 'https://lemonade.ga/noods/ApplicationFrameHost_ULyyoL2sv1.png' });
 
-        message.channel.send({ embeds: [mutereply] });
+        message.channel.send({ embeds: [mutereply] });//.catch(err => {
+        //     message.channel.send({ embeds: [cmd] });
+        // })
         
     }
 }
