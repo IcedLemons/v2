@@ -25,7 +25,7 @@ module.exports = {
 	    .setTimestamp()
 	    .setFooter({ text: 'Lemonade', iconURL: 'https://lemonade.ga/noods/ApplicationFrameHost_ULyyoL2sv1.png' });
 
-        const error = new MessageEmbed()
+        const cmd = new MessageEmbed()
 	    .setColor('#E74C3C')
 	    .setTitle('Error\n')
 	    .setDescription('Please specify valid content')
@@ -38,7 +38,7 @@ module.exports = {
         const time = ms(args[1])
         const reason = args[2] || null
         memberTarget.timeout(time, reason).catch(err => {
-            message.channel.send({ embeds: [error] });
+            message.channel.send({ embeds: [cmd] });
         })
         const mutereply = new MessageEmbed()
 	    .setColor('#FEE75C')
