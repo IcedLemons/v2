@@ -55,7 +55,7 @@ const run = async (client, interaction) => {
 module.exports = {
     name: "timeout",
     description: "Timeout a member",
-    perm: "MODERATE_MEMBERS",
+    perm: "MANAGE_MESSAGES",
     options: [
         {
             name: "user", description: "The user to timeout",
